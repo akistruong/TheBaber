@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Trang chính" android:icon="@drawable/ic_baseline_home_24" android:id="@+id/NavHome"></item>
+    <item android:title="Khám phá" android:icon="@drawable/ic_baseline_explore_24" android:id="@+id/Nav_Explore"></item>
+    <item android:title="Đặt lịch" android:icon="@drawable/ic_baseline_date_range_24" android:id="@+id/Nav_SetDate"></item>
+
+    <item android:title="Tài khoản" android:icon="@drawable/outline_person_black_24dp" android:id="@+id/Nav_User"></item>
+</menu>

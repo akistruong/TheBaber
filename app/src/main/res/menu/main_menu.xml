@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     <group
+         android:id="@+id/group1"
+         android:checkableBehavior="single">
+          <item
+              android:id="@+id/nav_user_history"
+               android:title="Lich sử cắt tóc"
+               android:icon="@drawable/outline_person_black_24dp"/>
+     </group>
+     <item android:title="Tài khoản">
+          <menu>
+               <item android:title="Cập nhập thông tin" android:id="@+id/nav_user_updateInfo">
+
+               </item>
+               <item android:title="Đổi mật khẩu">
+
+               </item>
+               <item android:title="Đăng xuất">
+
+               </item>
+          </menu>
+     </item>
+</menu>
