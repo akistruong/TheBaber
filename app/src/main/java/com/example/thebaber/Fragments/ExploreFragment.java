@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -87,7 +88,8 @@ public class ExploreFragment extends Fragment {
         rcvStyles = v.findViewById(R.id.rcv_style_list);
         pagerAdapter = new StyleAdapter(getActivity());
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),3);
-        rcvStyles.setLayoutManager(gridLayoutManager);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
+        rcvStyles.setLayoutManager(linearLayoutManager);
         pagerAdapter.setData(getListStyles());
         rcvStyles.setAdapter(pagerAdapter);
         return v;

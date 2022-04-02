@@ -23,12 +23,14 @@
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/card_item.xml" value="0.25" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_explore.xml" value="0.30808080808080807" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_home_user.xml" value="0.3277777777777778" />
-        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_set_date.xml" value="0.30808080808080807" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_set_date.xml" value="0.1" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_update_user.xml" value="0.3484848484848485" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_user.xml" value="0.1" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/header.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/history_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/list_date_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/bottom_nav_menu.xml" value="0.15343915343915343" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/date_picker_menu.xml" value="0.31296296296296294" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/main_menu.xml" value="0.33" />
       </map>
     </option>

@@ -1,5 +1,7 @@
 package com.example.thebaber.Models;
 
+import androidx.annotation.NonNull;
+
 public class User {
     String Email;
     Boolean isAdmin;
@@ -46,5 +48,11 @@ public class User {
 
     public void setUser(Boolean user) {
         isUser = user;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return Email;
     }
 }
