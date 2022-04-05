@@ -7,13 +7,17 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.thebaber.Adapter.BaberTvAdapter;
+import com.example.thebaber.Adapter.ServiceBaberSlideAdapter;
 import com.example.thebaber.Models.PostVideo;
+import com.example.thebaber.Models.ServiceBaber;
 import com.example.thebaber.PlayVideo;
 import com.example.thebaber.R;
 import com.google.android.flexbox.FlexboxLayoutManager;
@@ -31,6 +35,8 @@ public class HomeUserFragment extends Fragment {
     RecyclerView rcv_baberTv;
     BaberTvAdapter adapter;
     CardView baber_card;
+    ViewPager2 viewPager2;
+    Handler sliderHandler = new Handler();
     public HomeUserFragment() {
         // Required empty public constructor
     }
@@ -47,6 +53,16 @@ public class HomeUserFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_user, container, false);
         rcv_baberTv = view.findViewById(R.id.rcv_baberTv);
         baber_card =(CardView)view.findViewById(R.id.baber_tv_card);
+        viewPager2 = (ViewPager2)view.findViewById(R.id.vpg_service);
+        viewPager2.setAdapter(new ServiceBaberSlideAdapter(initServiceData(),viewPager2,getActivity()));
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                sliderHandler.removeCallbacks(sliderHandle);
+                sliderHandler.postDelayed(sliderHandle,3000);
+            }
+        });
         adapter = new BaberTvAdapter(getActivity(),initData());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
 //        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager()
@@ -64,5 +80,19 @@ public class HomeUserFragment extends Fragment {
         mPostVides.add(new PostVideo("asdh23asdkash","https://www.youtube.com/watch?v=6DM4jW0533A&ab_channel=CUKAK","https://storage.30shine.com/ResourceWeb/data/images/hanh-trinh-toa-sang/30shine-thay-doi-ngoai-hinh.jpg"));
         return mPostVides;
     }
-
+    List<ServiceBaber> initServiceData()
+    {
+        List<ServiceBaber> mService = new ArrayList<>();
+        mService.add(new ServiceBaber("https://images.pexels.com/photos/11297792/pexels-photo-11297792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","dasdasd","dasdada"));
+        mService.add(new ServiceBaber("https://images.pexels.com/photos/11297792/pexels-photo-11297792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","dasdasd","dasdada"));
+        mService.add(new ServiceBaber("https://images.pexels.com/photos/11297792/pexels-photo-11297792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","dasdasd","dasdada"));
+        mService.add(new ServiceBaber("https://images.pexels.com/photos/11297792/pexels-photo-11297792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","dasdasd","dasdada"));
+        return mService;
+    }
+    Runnable sliderHandle = new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem()+1);
+        }
+    };
 }
