@@ -28,6 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtEmail"
+                    android:inputType="textEmailAddress"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -35,7 +36,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tên tài khoản"
+                android:hint="Họ và tên"
                 tools:ignore="MissingConstraints"
                 app:helperTextTextColor="@color/error"
                 app:counterMaxLength="20"
@@ -54,6 +55,25 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Số điện thoại"
+                app:helperTextTextColor="@color/error"
+                app:counterMaxLength="15"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="password_toggle"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPhone"
+                    android:inputType="textPhonetic"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Mật khẩu"
                 app:helperTextTextColor="@color/error"
                 app:counterMaxLength="15"
@@ -66,6 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtPassword"
+                    android:inputType="textPassword"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -84,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtRePassword"
+                    android:inputType="textPassword"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <Button

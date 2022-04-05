@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeUserFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    //User display
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment"
-        android:background="@color/third_color"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/main_color"
+        android:padding="60px"
+        android:id="@+id/info_user"
+        android:layout_marginBottom="10dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/pexelphoto"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cao Trương Kiệt"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:fontFamily="@font/robotoslabregular"
+            />
+    </LinearLayout>
+    //Baber TV
+    <TextView
+        android:layout_below="@+id/info_user"
+        android:id="@+id/label_baberTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BABER TV"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        />
+        <FrameLayout
+            android:layout_below="@+id/label_baberTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_baberTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
 
-</LinearLayout>
+</RelativeLayout>

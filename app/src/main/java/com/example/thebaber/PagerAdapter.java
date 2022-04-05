@@ -31,10 +31,10 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         ImageView imageView = view1.findViewById(R.id.bannerIv);
         TextView textView =view1.findViewById(R.id.txtCardTitle);
         StyleHair style =  styles.get(position);
-        int url =style.getUrl();
+//        int url =style.getUrl();
         String Title = style.getTitle();
         //set data;
-        imageView.setImageResource(url);
+//        imageView.setImageResource(url);
         textView.setText(Title);
         container.addView(view1,position);
         return view1;

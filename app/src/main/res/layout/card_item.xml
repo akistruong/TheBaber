@@ -1,38 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    >
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:layout_margin="8dp"
-        android:background="@color/third_color"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/main_color"
+        android:id="@+id/style_card"
+
         >
-        >
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:id="@+id/bannerIv"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pexelphoto"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="sdasd"
-            android:gravity="center"
-            android:id="@+id/txtCardTitle"
-            android:textSize="15dp"
-            android:scrollHorizontally="true"
-            android:ellipsize="end"
-            android:maxLines="1"
-            />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+            android:layout_height="match_parent"
+
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bannerIv"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pexelphoto"
+
+                />
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SomeText"
+                    android:id="@+id/txtCardTitle"
+                    android:textSize="30dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:fontFamily="@font/robotoslabregular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/explore_dsc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dasasd"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/robotoslabregular"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

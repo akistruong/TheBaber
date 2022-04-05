@@ -10,25 +10,31 @@
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1955" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/ic_launcher_background.xml" value="0.234" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/item_selector.xml" value="0.1005" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/radio_custom_style.xml" value="0.143" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/round_corner.xml" value="0.1725" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/drawable/rounded_background.xml" value="0.2205" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_admin_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_flask_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_login.xml" value="0.35014005602240894" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_main.xml" value="0.2890625" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_play_video.xml" value="0.1" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_splash_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/activity_verify_phone.xml" value="0.25" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/baber_tv_item.xml" value="0.33229166666666665" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/bottom_nav_menu.xml" value="0.2962962962962963" />
-        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/card_item.xml" value="0.25" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/card_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_explore.xml" value="0.30808080808080807" />
-        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_home_user.xml" value="0.3277777777777778" />
-        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_set_date.xml" value="0.1" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_home_user.xml" value="0.3050847457627119" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_set_date.xml" value="0.25" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_update_user.xml" value="0.3484848484848485" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/fragment_user.xml" value="0.1" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/header.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/history_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/item_timepicker.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/list_date_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/radio_checked_style.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/layout/test.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/bottom_nav_menu.xml" value="0.15343915343915343" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/date_picker_menu.xml" value="0.31296296296296294" />
         <entry key="..\:/Users/truon/Desktop/TheBaber/app/src/main/res/menu/main_menu.xml" value="0.33" />

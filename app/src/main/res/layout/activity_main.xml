@@ -20,5 +20,6 @@
             app:itemIconSize="30dp"
             app:itemIconTint="@color/white"
             android:id="@+id/bottom_nav"
+            android:padding="4dp"
             />
 </RelativeLayout>

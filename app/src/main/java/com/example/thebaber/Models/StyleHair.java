@@ -1,19 +1,25 @@
 package com.example.thebaber.Models;
 
 public class StyleHair {
-    int url;
+    String url;
     String title;
+    String dsc;
+    String UriPost;
 
-    public StyleHair(int url, String title) {
+
+
+    public StyleHair(String url, String title, String dsc,String uriPost) {
         this.url = url;
         this.title = title;
+        this.dsc =dsc;
+        this.UriPost = uriPost;
     }
 
-    public int getUrl() {
+    public String getUrl() {
         return url;
     }
 
-    public void setUrl(int url) {
+    public void setUrl(String url) {
         this.url = url;
     }
 
@@ -23,5 +29,20 @@ public class StyleHair {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDsc() {
+        return dsc;
+    }
+
+    public void setDsc(String dsc) {
+        this.dsc = dsc;
+    }
+    public String getUriPost() {
+        return UriPost;
+    }
+
+    public void setUriPost(String uriPost) {
+        UriPost = uriPost;
     }
 }

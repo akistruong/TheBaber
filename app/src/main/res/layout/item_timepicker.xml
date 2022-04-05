@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RadioButton android:id="@+id/btnRadio_times"
+    android:minWidth="80dp"
+    android:layout_margin="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:button="@null"
+    android:background="@drawable/radio_custom_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fontFamily="@font/robotoslabregular"
+    android:textAlignment="center"
+    />

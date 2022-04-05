@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +44,7 @@ public class Register extends AppCompatActivity {
         mUserName = (TextInputEditText)findViewById(R.id.txtUserName);
         mPassword = (TextInputEditText)findViewById(R.id.txtPassword);
         mRePassword = (TextInputEditText)findViewById(R.id.txtRePassword);
+        mPhone = (TextInputEditText)findViewById(R.id.txtPhone);
         mGoToLogin = findViewById(R.id.goToLogin);
         btnRegister = findViewById(R.id.btnOk);
         mGoToLogin.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +60,7 @@ public class Register extends AppCompatActivity {
                 String email = mEmail.getText().toString();
                 String username = mUserName.getText().toString();
                 String password = mPassword.getText().toString();
+                String phone = mPhone.getText().toString();
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -68,7 +71,7 @@ public class Register extends AppCompatActivity {
 
                                     FirebaseUser currentUser = mAuth.getCurrentUser();
                                     DocumentReference df = mStore.collection("users").document(currentUser.getUid());
-                                    User user = new User(email,false,false,true);
+                                    User user = new User(email,username,phone,false,false,false,new Date());
                                     df.set(user);
                                     Toast.makeText(Register.this, "Register Success.",
                                             Toast.LENGTH_SHORT).show();
