@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+
+<FrameLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    android:background="@color/third_color"
-    >
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+                <ImageView
+                    android:id="@+id/service_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/imgshine"
+                    />
 
-            >
-            <ImageView
-                android:id="@+id/service_banner"
-                android:layout_width="match_parent"
-                android:src="@drawable/imgshine"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="dawdadad"
-                android:id="@+id/txt_title_service"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="dawdadad"
-                android:id="@+id/txt_dsc_service"
-                />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</FrameLayout>
+    </FrameLayout>

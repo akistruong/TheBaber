@@ -52,6 +52,7 @@ public class SetDateFragment extends Fragment {
     Button btnSetDate;
     FirebaseFirestore mStore;
     FirebaseAuth mAuth;
+    FirebaseUser user;
     public SetDateFragment() {
         // Required empty public constructor
     }
@@ -67,6 +68,7 @@ public class SetDateFragment extends Fragment {
         Date tempDate = new Date();
         mStore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
        int currentDay =tempDate.getDay();
        int dateCount = 0;
 
@@ -142,7 +144,7 @@ public class SetDateFragment extends Fragment {
                 DateFormat.setMinutes(0);
                 DateFormat.setSeconds(0);
                 Toast.makeText(getActivity(), "YourTimes"+DateFormat.toString(), Toast.LENGTH_SHORT).show();
-                FirebaseUser user = mAuth.getCurrentUser();
+
                 DocumentReference docRef = mStore.collection("users").document(user.getUid());
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -153,7 +155,7 @@ public class SetDateFragment extends Fragment {
                             if(document.exists())
                             {
                                 User user1 = document.toObject(User.class);
-                                BaberTask newBaberTask = new BaberTask(user1.getUserName(),DateFormat, user1.getPhone(), false,0);
+                                BaberTask newBaberTask = new BaberTask(user1.getUserName(),DateFormat, user1.getPhone(), false,0,user.getUid(),null,null);
                                 mStore.collection("Task").add(newBaberTask).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentReference> task) {
@@ -183,7 +185,7 @@ public class SetDateFragment extends Fragment {
 
     private List<String> getListTimes() {
      List<String>   Times = new ArrayList<String>();
-       for(int i=8;i<=20;i++)
+       for(int i=8;i<=24;i++)
        {
            Times.add(i+"H00");
        }

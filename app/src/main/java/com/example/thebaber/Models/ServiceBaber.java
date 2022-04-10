@@ -4,11 +4,21 @@ public class ServiceBaber {
     String url;
     String title;
     String dsc;
+    Float price;
 
-    public ServiceBaber(String url, String title, String dsc) {
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public ServiceBaber(String url, String title, String dsc,Float Price) {
         this.url = url;
         this.title = title;
         this.dsc = dsc;
+        this.price = price==null?null:price;
     }
 
     public String getUrl() {

@@ -19,6 +19,7 @@ import com.example.thebaber.PagerAdapter;
 import com.example.thebaber.R;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TimePickerAdapter extends RecyclerView.Adapter<TimePickerAdapter.TimePickerViewHolder> {
@@ -56,11 +57,18 @@ public class TimePickerAdapter extends RecyclerView.Adapter<TimePickerAdapter.Ti
     }
     @Override
     public void onBindViewHolder(@NonNull TimePickerViewHolder holder, int position) {
+        int hours = new Date().getHours();
+
         String time = times.get(position);
+        int getHoursObj = Integer.parseInt(time.split("H")[0]);
         if(time==null)
         {
             return;
         }
+       if(getHoursObj<hours)
+       {
+           holder.btnRadio_times.setEnabled(false);
+       }
         holder.btnRadio_times.setText(time);
         holder.btnRadio_times.setChecked(position==selectedPosition);
         holder.btnRadio_times.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

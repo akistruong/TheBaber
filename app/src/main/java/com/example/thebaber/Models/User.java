@@ -2,11 +2,28 @@ package com.example.thebaber.Models;
 
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.Map;
 
-public class User {
+public class User implements Serializable {
+    UrlObj avtUrl;
+
+    public UrlObj getAvtUrl() {
+        return avtUrl;
+    }
+
+    public void setAvtUrl(UrlObj avtUrl) {
+        this.avtUrl = avtUrl;
+    }
+
     String Email;
-
+    String UserName;
+    String Phone;
+    Boolean isAdmin;
+    Boolean isStaff;
+    Boolean isUser;
+    Date timeStamp;
     public String getUserName() {
         return UserName;
     }
@@ -15,7 +32,7 @@ public class User {
         UserName = userName;
     }
 
-    public User(String email, String userName, String phone, Boolean isAdmin, Boolean isStaff, Boolean isUser, Date timeStamp) {
+    public User(String email, String userName, String phone, Boolean isAdmin, Boolean isStaff, Boolean isUser, Date timeStamp,UrlObj avt) {
         Email = email;
         UserName = userName;
         Phone = phone;
@@ -23,14 +40,10 @@ public class User {
         this.isStaff = isStaff;
         this.isUser = isUser;
         this.timeStamp = timeStamp;
+        this.avtUrl = avt==null?null:avt;
     }
 
-    String UserName;
-    String Phone;
-    Boolean isAdmin;
-    Boolean isStaff;
-    Boolean isUser;
-    Date timeStamp;
+
 
     public User() {
     }

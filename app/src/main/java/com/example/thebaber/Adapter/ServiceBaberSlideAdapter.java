@@ -45,9 +45,11 @@ public class ServiceBaberSlideAdapter extends RecyclerView.Adapter<ServiceBaberS
         {
             return;
         }
-        holder.mTitle.setText(item.getTitle());
-        holder.mDsc.setText(item.getDsc());
         Glide.with(context).load(item.getUrl()).into(holder.mbanner);
+        if(position==mList.size()-2)
+        {
+            viewPager2.post(runnable);
+        }
     }
 
     @Override
@@ -58,17 +60,19 @@ public class ServiceBaberSlideAdapter extends RecyclerView.Adapter<ServiceBaberS
         }
         return 0;
     }
-
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            mList.addAll(mList);
+            notifyDataSetChanged();
+        }
+    };
     public class ServiceBaberSliceViewHolder extends RecyclerView.ViewHolder
     {
         ImageView mbanner;
-        TextView   mTitle;
-        TextView mDsc;
         public ServiceBaberSliceViewHolder(@NonNull View itemView) {
             super(itemView);
             mbanner = itemView.findViewById(R.id.service_banner);
-            mTitle = itemView.findViewById(R.id.txt_title_service);
-            mDsc = itemView.findViewById(R.id.txt_dsc_service);
         }
 
         @Override

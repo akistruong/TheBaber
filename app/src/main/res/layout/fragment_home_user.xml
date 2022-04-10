@@ -16,8 +16,9 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-
-            android:src="@drawable/pexelphoto"/>
+            android:id="@+id/avt_user"
+            android:src="@drawable/pexelphoto"
+        />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,9 +28,9 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             android:fontFamily="@font/robotoslabregular"
+            android:id="@+id/user_fullName"
             />
     </LinearLayout>
-    //CardView
     //Baber TV
     <TextView
         android:layout_below="@+id/info_user"
@@ -53,16 +54,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
         </FrameLayout>
-        <FrameLayout
-            android:layout_marginTop="10dp"
-            android:id="@+id/slide_service"
-            android:layout_below="@+id/babertv_container"
+
+    //Service
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/slide_service"
+        android:layout_below="@+id/babertv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/vpg_service"
-                />
-        </FrameLayout>
+            android:layout_height="wrap_content"
+            android:id="@+id/vpg_service"
+            />
+    </FrameLayout>
+    //Lookbook
+    <TextView
+        android:layout_below="@+id/slide_service"
+        android:id="@+id/label_lookbook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BABER Lookbook"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_lookbook"
+        android:layout_marginTop="10dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_lookbook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
 </RelativeLayout>

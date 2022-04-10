@@ -1,34 +1,18 @@
 package com.example.thebaber;
 
+import static com.example.thebaber.Helpers.CloudHelper.initCloud;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
-import com.example.thebaber.Fragments.ExploreFragment;
-import com.example.thebaber.Fragments.HistoryUser;
-import com.example.thebaber.Fragments.HomeUserFragment;
-import com.example.thebaber.Fragments.SetDateFragment;
-import com.example.thebaber.Fragments.UpdateUserFragment;
-import com.example.thebaber.Fragments.UserFragment;
+import com.example.thebaber.Helpers.CloudHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
    BottomNavigationView navigationView;
@@ -42,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.bottom_nav);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(viewPagerAdapter);
+        CloudHelper helper = new CloudHelper(MainActivity.this);
+        initCloud();
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

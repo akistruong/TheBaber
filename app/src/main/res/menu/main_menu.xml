@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
      <group
          android:id="@+id/group1"
-         android:checkableBehavior="single">
+         >
           <item
               android:id="@+id/nav_user_history"
                android:title="Lich sử cắt tóc"

@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity {
 
                                     FirebaseUser currentUser = mAuth.getCurrentUser();
                                     DocumentReference df = mStore.collection("users").document(currentUser.getUid());
-                                    User user = new User(email,username,phone,false,false,false,new Date());
+                                    User user = new User(email,username,phone,false,false,false,new Date(),null);
                                     df.set(user);
                                     Toast.makeText(Register.this, "Register Success.",
                                             Toast.LENGTH_SHORT).show();
