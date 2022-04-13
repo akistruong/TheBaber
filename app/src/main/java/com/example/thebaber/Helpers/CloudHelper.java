@@ -14,6 +14,7 @@ public class CloudHelper {
     static Context context;
     public CloudHelper(Context context) {
         this.context = context;
+
     }
     public static  void initCloud()
     {
@@ -23,6 +24,7 @@ public class CloudHelper {
         config.put("api_secret", "fa3Za_WvvqpWPI68ua1FRcqItVk");
         config.put("secure", true);
         MediaManager.init(context, config);
+
     }
 
     @Override

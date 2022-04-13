@@ -13,10 +13,10 @@
                <item android:title="Cập nhập thông tin" android:id="@+id/nav_user_updateInfo">
 
                </item>
-               <item android:title="Đổi mật khẩu">
+               <item android:title="Đổi mật khẩu" >
 
                </item>
-               <item android:title="Đăng xuất">
+               <item android:title="Đăng xuất" android:id="@+id/nav_user_logout">
 
                </item>
           </menu>

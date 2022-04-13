@@ -1,5 +1,7 @@
 package com.example.thebaber.Fragments;
 
+import static android.content.ContentValues.TAG;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -146,6 +148,7 @@ public class SetDateFragment extends Fragment {
                 Toast.makeText(getActivity(), "YourTimes"+DateFormat.toString(), Toast.LENGTH_SHORT).show();
 
                 DocumentReference docRef = mStore.collection("users").document(user.getUid());
+
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -154,19 +157,17 @@ public class SetDateFragment extends Fragment {
                             DocumentSnapshot document = task.getResult();
                             if(document.exists())
                             {
+                                String TaskId = mStore.collection("Task").document().getId().toString();
                                 User user1 = document.toObject(User.class);
-                                BaberTask newBaberTask = new BaberTask(user1.getUserName(),DateFormat, user1.getPhone(), false,0,user.getUid(),null,null);
-                                mStore.collection("Task").add(newBaberTask).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                BaberTask newBaberTask = new BaberTask(TaskId,user1.getUserName(),DateFormat, user1.getPhone(), false,0,user.getUid(),null,null,null);
+                                mStore.collection("Task").document(TaskId).set(newBaberTask).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onComplete(@NonNull Task<DocumentReference> task) {
-                                        if(task.isSuccessful())
-                                        {
-                                            Toast.makeText(getActivity(), "Them thanh cong", Toast.LENGTH_SHORT).show();
-                                        }
-                                        else
-                                        {
-                                            Toast.makeText(getActivity(), "Them that bai", Toast.LENGTH_SHORT).show();
-                                        }
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful())
+                                            {
+                                                Log.d(TAG, "onComplete: Them Thanh Cong");
+                                            }
+                                            
                                     }
                                 });
                             }

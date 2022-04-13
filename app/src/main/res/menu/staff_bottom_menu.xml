@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Công việc" android:icon="@drawable/ic_baseline_home_24" android:id="@+id/nav_staff_task"></item>
+    <item android:title="Người dùng" android:icon="@drawable/ic_baseline_explore_24" android:id="@+id/nav_staff_account"></item>
+
+</menu>

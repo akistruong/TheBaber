@@ -119,7 +119,10 @@ public class HomeUserFragment extends Fragment {
                     User mUser  = task.getResult().toObject(User.class);
                     if(task.getResult().exists())
                     {
-                       Glide.with(getActivity()).load(mUser.getAvtUrl().getUrl()).into(avt);
+                       if(mUser.getAvtUrl()!=null)
+                       {
+                           Glide.with(getActivity()).load(mUser.getAvtUrl().getUrl()).error(R.drawable.nouser).fallback(R.drawable.nouser).into(avt);
+                       }
                        mFullName.setText(mUser.getUserName());
                     }
                 }

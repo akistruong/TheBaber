@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.thebaber">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TheBaber">
+        <activity
+            android:name=".StaffActivityPackage.DetailTask"
+            android:exported="false" />
+        <activity
+            android:name=".StaffActivity"
+            android:exported="false" />
         <activity
             android:name=".UserActivity.UpdateUser"
             android:exported="false" />
@@ -43,9 +51,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="CLOUDINARY_URL"
-            android:value="CLOUDINARY_URL=cloudinary://182598294733339:fa3Za_WvvqpWPI68ua1FRcqItVk@akistruong"/>
+            android:value="CLOUDINARY_URL=cloudinary://182598294733339:fa3Za_WvvqpWPI68ua1FRcqItVk@akistruong" />
     </application>
 
 </manifest>

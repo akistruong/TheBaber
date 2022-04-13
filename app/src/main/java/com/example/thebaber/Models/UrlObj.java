@@ -10,7 +10,7 @@ public class UrlObj {
 
     public UrlObj(String url, String public_id) {
         this.url = url;
-        this.public_id = public_id;
+        this.public_id = public_id==null?null:public_id;
     }
 
     public String getUrl() {

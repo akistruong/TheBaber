@@ -48,4 +48,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
     implementation 'com.cloudinary:cloudinary-android:2.2.0'
+    implementation 'com.google.firebase:firebase-storage'
 }

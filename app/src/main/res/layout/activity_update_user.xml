@@ -7,14 +7,31 @@
     tools:context=".UserActivity.UpdateUser"
     android:orientation="vertical"
     >
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
-        android:id="@+id/iv_avt_update"
-        android:src="@drawable/imgshine"
-        />
+        android:id="@+id/layout_avt"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_avt_update"
+            android:src="@drawable/nouser"
+            android:layout_margin="20dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/iv_avt_update"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            />
+    </RelativeLayout>
+
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
@@ -50,8 +67,18 @@
         android:id="@+id/btn_user_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Text button"
+        android:text="Cập nhật"
+
 
         />
-
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/third_color"
+        android:id="@+id/update_loading"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
 </LinearLayout>

@@ -71,11 +71,11 @@ public class Register extends AppCompatActivity {
 
                                     FirebaseUser currentUser = mAuth.getCurrentUser();
                                     DocumentReference df = mStore.collection("users").document(currentUser.getUid());
-                                    User user = new User(email,username,phone,false,false,false,new Date(),null);
+                                    User user = new User(email,username,phone,false,false,true,new Date(),null);
                                     df.set(user);
                                     Toast.makeText(Register.this, "Register Success.",
                                             Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Register.this,MainActivity.class));
+                                    startActivity(new Intent(Register.this,SplashScreen.class));
                                     finish();
                                 } else {
                                     // If sign in fails, display a message to the user.

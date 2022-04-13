@@ -1,5 +1,9 @@
 package com.example.thebaber.Fragments;
 
+import static com.example.thebaber.Helpers.CloudHelper.initCloud;
+import static com.example.thebaber.MainActivity.mainActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -18,9 +22,11 @@ import com.example.thebaber.Adapter.UserPagerAdapter;
 import com.example.thebaber.AdminScreen;
 import com.example.thebaber.Login;
 import com.example.thebaber.R;
+import com.example.thebaber.SplashScreen;
 import com.example.thebaber.UserActivity.UpdateUser;
 import com.example.thebaber.UserActivity.UserHistory;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,6 +46,7 @@ public class UserFragment extends Fragment {
     ViewPager viewPager;
     NavigationView navigationView;
     UserPagerAdapter adapter;
+    FirebaseAuth mAuth;
     public UserFragment() {
         // Required empty public constructor
     }
@@ -63,12 +70,21 @@ public class UserFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        mAuth = FirebaseAuth.getInstance();
+
     }
 
     @Override
@@ -99,6 +115,13 @@ public class UserFragment extends Fragment {
                         Intent intent = new Intent(getActivity(), UpdateUser.class);
                         getActivity().startActivity(intent);
                         getActivity().overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+                    }
+                    else if(item.getItemId()==R.id.nav_user_logout)
+                    {
+                        mAuth.signOut();
+                        Intent intent = new Intent(getActivity(), SplashScreen.class);
+                        getActivity().startActivity(intent);
+                        mainActivity.finish();
                     }
                     return false;
                 }
