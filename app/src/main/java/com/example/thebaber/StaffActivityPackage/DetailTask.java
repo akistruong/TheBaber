@@ -91,6 +91,7 @@ public class DetailTask extends AppCompatActivity {
                         textViewSelect.setText(stringBuilder.toString());
                         Log.d(TAG, "onClick: "+ServicePositions.toString());
                         listSelected = selectedTemp;
+                        String a = "sdasd";
                     }
                 });
                 builder.show();
